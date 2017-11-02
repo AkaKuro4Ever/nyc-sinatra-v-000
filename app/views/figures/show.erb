@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Figures</title>
+  </head>
+
+  <body>
+    <h2> Figures: </h2>
+    <br></br>
+      <%Figure.all.each_with_index do |figure, i|%>
+        <h3><%=i+1%>. <%=figure.name%></input></h3>
+        <br></br>
+      <%end%>
+
+  </body>
+</html>

@@ -5,7 +5,8 @@
   </head>
 
   <body>
-    <form method="POST" action="/figures">
+    <form action="/figures/<%=@figure.id %>" method="post">
+		  <input id="hidden" type="hidden" name="_method" value="patch">
       <label>Name: </label><input type="text" name="figure[name]" id="figure_name">
       <br></br>
       <label>Title: </label><input type="text" name="title[name]" id="new_title">

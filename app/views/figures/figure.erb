@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=@figure.name%></title>
+  </head>
+
+  <body>
+    <h1> <%=@figure.name%> </h1>
+    <h2>Titles</h2>
+    <br></br>
+      <%@figure.titles.all.each_with_index do |title, i|%>
+        <h3><%=i+1%>. <%=title.name%></input></h3>
+        <br></br>
+      <%end%>
+
+  </body>
+</html>
