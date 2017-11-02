@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Landmarks</title>
+  </head>
+
+  <body>
+    <h1>Landmarks</h1>
+
+    <%Landmark.all.each_with_index do |landmark, i|%>
+    <h3><%=i+1%>. <%=landmark.name%></h3>
+    <h3>Year Completed: </h3> <%=landmark.year_completed%>
+    <%end%>
+
+  </body>
+</html>

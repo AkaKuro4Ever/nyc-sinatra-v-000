@@ -13,5 +13,11 @@
         <br></br>
       <%end%>
 
+    <h2>Landmarks</h2>
+    <br></br>
+      <%@figure.landmarks.all.each_with_index do |landmark, i|%>
+        <h3><%=i+1%>. <%=landmark.name%></input></h3>
+        <br></br>
+      <%end%>
   </body>
 </html>
