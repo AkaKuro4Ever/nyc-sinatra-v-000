@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Figure</title>
+  </head>
+
+  <body>
+    <form method="POST" action="figures/new">
+      <label>Name: </label><input type="text" name="figure[name]" id="figure_name">
+      <br></br>
+      <label>Title: </label><input type="text" name="title[name]" id="title[name]">
+      <br></br>
+    <label> Additional Titles: </label>
+    <br></br>
+      <%Title.all.each_with_index do |title, i|%>
+        <input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="title_<%=i+1%>"><%=title.name%></input>
+        <br></br>
+      <%end%>
+
+    <label>Landmark they're known for: </label><input type="text" name="landmark[name]" id="landmark_name">
+    <br></br>
+    <label>Additional Landmarks: </label>
+      <%Landmark.all.each do |landmark|%>
+        <input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="<%=landmark.id%>">  <%=landmark.name%></input>
+      <%end%>
+
+      <button type="submit" value="create">Create</button>
+    </form>
+  </body>
+</html>
